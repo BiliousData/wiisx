@@ -1,0 +1,4 @@
+1 xa postmortalv.xa 1 0
+1 xa postmortali.xa 1 1
+1 xa playthingv.xa 1 2
+1 xa playthingi.xa 1 3

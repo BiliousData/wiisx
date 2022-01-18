@@ -1,0 +1,19 @@
+all: \
+  iso/music/menu.xa \
+  iso/music/wiia.xa \
+  iso/music/wiib.xa \
+  iso/music/wiic.xa \
+  iso/music/cut.xa
+
+# XA converts
+iso/music/%.xa: iso/music/%.ogg
+	tools/psxavenc/psxavenc -f 37800 -t xa -b 4 -c 2 -F 1 -C 0 $< $@
+iso/music/%.xa:
+	tools/xainterleave/xainterleave $@
+
+# XA interleaves
+iso/music/menu.xa: iso/music/freaky.xa iso/music/gameover.xa
+iso/music/wiia.xa: iso/music/dreamofpeacei.xa iso/music/dreamofpeacev.xa iso/music/diagraphephobiai.xa iso/music/diagraphephobiav.xa
+iso/music/wiib.xa: iso/music/postmortali.xa iso/music/postmortalv.xa iso/music/playthingi.xa iso/music/playthingv.xa
+iso/music/wiic.xa: iso/music/systemfailurei.xa iso/music/systemfailurev.xa iso/music/banan.xa
+iso/music/cut.xa: iso/music/gottem.xa

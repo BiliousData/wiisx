@@ -1,0 +1,89 @@
+all: \
+	iso/menu/menu.arc \
+	iso/menu/loading.tim \
+	iso/font/boldfont.tim \
+	iso/font/arial.tim \
+	iso/stage/hud0.tim \
+	iso/stage/hud1.tim \
+	iso/stage/hud0weeb.tim \
+	iso/stage/hud0bf.tim \
+	iso/stage/hud0del.tim \
+	iso/stage/hud0aust.tim \
+	iso/stage/hud0austp.tim \
+	iso/stage/hud0blnk.tim \
+	iso/bf/main.arc \
+	iso/bf/dead.arc \
+	iso/bf/weeb.arc \
+	iso/bf/xmas.arc \
+	iso/bfmii/main.arc \
+	iso/bfmii/dead.arc \
+	iso/gfmii/main.arc \
+	iso/gfmii/speaker.tim \
+	iso/gf/main.arc \
+	iso/gf/tut.arc \
+	iso/gf/weeb.arc \
+	iso/gf/speaker.tim \
+	iso/banana/main.arc \
+	iso/eteleda/main.arc \
+	iso/eteledb/main.arc \
+	iso/eteledb/spook.arc \
+	iso/eteledcut/main.arc \
+	iso/austine/main.arc \
+	iso/austinp/main.arc \
+	iso/plaza/back.arc \
+	iso/plazab/back.arc \
+	iso/plazac/back.arc \
+	iso/hall/back.arc \
+
+iso/%.tim: iso/%.png
+	tools/funkintimconv/funkintimconv $@ $<
+
+iso/%.arc:
+	tools/funkinarcpak/funkinarcpak $@ $^
+
+# Menu
+iso/menu/menu.arc: iso/menu/back.tim iso/menu/ng.tim iso/menu/bitcher.tim iso/menu/story.tim iso/menu/title.tim
+
+# BF
+iso/bf/main.arc: iso/bf/bf0.tim iso/bf/bf1.tim iso/bf/bf2.tim iso/bf/bf3.tim iso/bf/bf4.tim iso/bf/bf5.tim iso/bf/bf6.tim iso/bf/dead0.tim
+iso/bf/dead.arc: iso/bf/dead1.tim iso/bf/dead2.tim iso/bf/retry.tim
+iso/bf/weeb.arc: iso/bf/weeb0.tim iso/bf/weeb1.tim
+
+# Mii BF
+iso/bfmii/main.arc: iso/bfmii/idle.tim iso/bfmii/hit0.tim iso/bfmii/miss0.tim iso/bfmii/hit1.tim iso/bfmii/miss1.tim iso/bfmii/peace.tim iso/bfmii/dead0.tim
+iso/bfmii/dead.arc: iso/bfmii/dead1.tim iso/bfmii/dead2.tim iso/bfmii/retry.tim
+
+# Mii GF
+iso/gfmii/main.arc: iso/gfmii/bopleft.tim iso/gfmii/bopright.tim iso/gfmii/cry.tim
+
+# GF
+iso/gf/main.arc: iso/gf/gf0.tim iso/gf/gf1.tim iso/gf/gf2.tim
+iso/gf/tut.arc: iso/gf/tut0.tim iso/gf/tut1.tim
+iso/gf/weeb.arc: iso/gf/weeb0.tim iso/gf/weeb1.tim
+
+# Eteled
+
+iso/banana/main.arc: iso/banana/idle.tim
+
+iso/eteleda/main.arc: iso/eteleda/idle0.tim iso/eteleda/hit0.tim iso/eteleda/hit1.tim iso/eteleda/hit2.tim iso/eteleda/hit3.tim
+
+iso/eteledb/main.arc: iso/eteledb/idle0.tim iso/eteledb/idle1.tim iso/eteledb/idle2.tim iso/eteledb/idle3.tim iso/eteledb/left0.tim iso/eteledb/left1.tim iso/eteledb/down.tim iso/eteledb/up0.tim iso/eteledb/up1.tim iso/eteledb/right.tim
+
+iso/eteledb/spook.arc: iso/eteledb/idleb0.tim iso/eteledb/idleb1.tim iso/eteledb/idleb2.tim iso/eteledb/idleb3.tim iso/eteledb/leftb0.tim iso/eteledb/leftb1.tim iso/eteledb/downb.tim iso/eteledb/upb0.tim iso/eteledb/upb1.tim iso/eteledb/rightb.tim
+
+iso/eteledcut/main.arc: iso/eteledcut/cut0.tim iso/eteledcut/cut1.tim iso/eteledcut/cut2.tim iso/eteledcut/turn0.tim iso/eteledcut/turn1.tim iso/eteledcut/turn2.tim iso/eteledcut/turn3.tim
+
+#Austin
+iso/austine/main.arc: iso/austine/idle0.tim iso/austine/idle1.tim iso/austine/idle2.tim iso/austine/idle3.tim iso/austine/down0.tim iso/austine/down1.tim iso/austine/down2.tim iso/austine/left0.tim iso/austine/hit0.tim iso/austine/right0.tim iso/austine/right1.tim iso/austine/right2.tim iso/austine/up.tim
+
+iso/austinp/main.arc: iso/austinp/idle0.tim iso/austinp/idle1.tim iso/austinp/idle2.tim iso/austinp/idle3.tim iso/austinp/down0.tim iso/austinp/down1.tim iso/austinp/down2.tim iso/austinp/left0.tim iso/austinp/hit0.tim iso/austinp/right0.tim iso/austinp/right1.tim iso/austinp/right2.tim iso/austinp/up.tim
+
+# Mii plaza
+iso/plaza/back.arc: iso/plaza/back0.tim iso/plaza/back1.tim
+
+iso/plazab/back.arc: iso/plazab/back0.tim iso/plazab/back1.tim iso/plazab/glitch0.tim iso/plazab/glitch1.tim iso/plazab/noise0.tim iso/plazab/noise1.tim
+
+iso/plazac/back.arc: iso/plazac/back0.tim iso/plazac/back1.tim
+
+#spooky Wii hallway
+iso/hall/back.arc: iso/hall/back0.tim iso/hall/back1.tim

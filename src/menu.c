@@ -906,6 +906,7 @@ void Menu_Tick(void)
 				{StageId_1_1, "", false},
 				{StageId_1_1, "UNSTOPABLE", false},
 				{StageId_1_1, "BF AND GF SPRITES", false},
+				{StageId_1_1, "PLAYTESTING", false},
 				{StageId_1_1, "", false},
 				{StageId_1_1, "SNICKERBITZ", false},
 				{StageId_1_1, "AUSTIN ICONS", false},
@@ -946,7 +947,7 @@ void Menu_Tick(void)
 				{StageId_1_1, "VOLTERGEIST", false},
 				{StageId_1_1, "ART HELP", false},
 				{StageId_1_1, "", false},
-				{StageId_1_1, "AMORALTRA", false}, //I know what he did. But he was involved with the creation of this mod, and regardless of whether or not someone is good or bad, I will give credit where it is due.
+				{StageId_1_1, "AMORALTRA", false},
 				{StageId_1_1, "ART HELP", false},
 				{StageId_1_1, "", false},
 				{StageId_1_1, "MAILICIOUSBUNNY", false},

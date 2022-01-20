@@ -770,13 +770,13 @@ void Menu_Tick(void)
 				const char *text;
 			} menu_options[] = {
 				//{StageId_4_4, 0xFFFC96D7, "TEST"},
-				{StageId_1_1, 0xFF9271FD, "DREAM OF PEACE"},
-				{StageId_1_2, 0xFF9271FD, "DIAGRAPEPHOBIA"},
-				{StageId_1_3, 0xFF9271FD, "POST MORTAL"},
-				{StageId_1_4, 0xFF9271FD, "PLAYTHING"},
-				{StageId_1_5, 0xFF223344, "SYSTEM FAILURE"},
-				//{StageId_1_6, 0xFF223344, "SOUTH"},
-				//{StageId_1_7, 0xFF223344, "MONSTER"},
+				{StageId_1_1, 0x889AC8, "DREAM OF PEACE"},
+				{StageId_1_2, 0x889AC8, "DIAGRAPEPHOBIA"},
+				{StageId_1_3, 0x889AC8, "POST MORTAL"},
+				{StageId_1_4, 0x889AC8, "PLAYTHING"},
+				{StageId_1_5, 0x889AC8, "SYSTEM FAILURE"},
+				{StageId_1_6, 0x889AC8, "BANANALED"},
+				{StageId_1_7, 0x889AC8, "INTRO"},
 			};
 			//Initialize page
 			if (menu.page_swap)

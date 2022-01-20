@@ -76,7 +76,7 @@ iso/eteledcut/main.arc: iso/eteledcut/cut0.tim iso/eteledcut/cut1.tim iso/eteled
 #Austin
 iso/austine/main.arc: iso/austine/idle0.tim iso/austine/idle1.tim iso/austine/idle2.tim iso/austine/idle3.tim iso/austine/down0.tim iso/austine/down1.tim iso/austine/down2.tim iso/austine/left0.tim iso/austine/hit0.tim iso/austine/right0.tim iso/austine/right1.tim iso/austine/right2.tim iso/austine/up.tim
 
-iso/austinp/main.arc: iso/austinp/idle0.tim iso/austinp/idle1.tim iso/austinp/idle2.tim iso/austinp/idle3.tim iso/austinp/down0.tim iso/austinp/down1.tim iso/austinp/down2.tim iso/austinp/left0.tim iso/austinp/hit0.tim iso/austinp/right0.tim iso/austinp/right1.tim iso/austinp/right2.tim iso/austinp/up.tim
+iso/austinp/main.arc: iso/austinp/idle0.tim iso/austinp/idle1.tim iso/austinp/idle2.tim iso/austinp/idle3.tim iso/austinp/down0.tim iso/austinp/down1.tim iso/austinp/down2.tim iso/austinp/left0.tim iso/austinp/hit0.tim iso/austinp/right0.tim iso/austinp/right1.tim iso/austinp/right2.tim iso/austinp/up.tim iso/austinp/missl.tim iso/austinp/missd.tim iso/austinp/miss.tim iso/austinp/die/die0.tim iso/austinp/die/die1.tim iso/austinp/die/die2.tim iso/austinp/die/die3.tim iso/austinp/die/die4.tim iso/austinp/die/die5.tim iso/austinp/die/die6.tim iso/austinp/die/die7.tim iso/austinp/die/die8.tim
 
 # Mii plaza
 iso/plaza/back.arc: iso/plaza/back0.tim iso/plaza/back1.tim
@@ -87,3 +87,7 @@ iso/plazac/back.arc: iso/plazac/back0.tim iso/plazac/back1.tim
 
 #spooky Wii hallway
 iso/hall/back.arc: iso/hall/back0.tim iso/hall/back1.tim
+
+
+
+

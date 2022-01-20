@@ -27,6 +27,19 @@ enum
 	AustinP_ArcMain_Right0,
 	AustinP_ArcMain_Right1,
 	AustinP_ArcMain_Right2,
+	AustinP_ArcMain_MissL,
+	AustinP_ArcMain_MissD,
+	AustinP_ArcMain_Miss,
+
+	AustinP_ArcMain_Die0,
+	AustinP_ArcMain_Die1,
+	AustinP_ArcMain_Die2,
+	AustinP_ArcMain_Die3,
+	AustinP_ArcMain_Die4,
+	AustinP_ArcMain_Die5,
+	AustinP_ArcMain_Die6,
+	AustinP_ArcMain_Die7,
+	AustinP_ArcMain_Die8,
 	
 	AustinP_Arc_Max,
 };
@@ -66,10 +79,27 @@ static const CharFrame char_austinp_frame[] = {
 	{AustinP_ArcMain_Right0, {  0,   0,201, 177}, {117, 201}}, //13
 	{AustinP_ArcMain_Right1, {  0,   0,203, 176}, {119, 200}}, //14
 	{AustinP_ArcMain_Right2, {  0,   0,204, 175}, {120, 199}}, //15
+
+	{AustinP_ArcMain_MissL, {  0,   0,213, 180}, {123, 205}}, //16
+	{AustinP_ArcMain_MissD, {  0,   0,157, 149}, { 71, 173}}, //17
+	{AustinP_ArcMain_Miss,  {  0,   0,122, 229}, { -7, 257}}, //18
+	{AustinP_ArcMain_Miss,  {123,   0,120, 229}, {-38, 256}}, //19
+
+	{AustinP_ArcMain_Die0,   {  0,  0,161,204}, { 65, 229}}, //20
+	{AustinP_ArcMain_Die1,   {  0,  0,162,205}, { 61, 229}}, //21
+	{AustinP_ArcMain_Die2,   {  0,  0,172,205}, { 61, 229}}, //22
+	{AustinP_ArcMain_Die3,   {  0,  0,180,205}, { 61, 229}}, //23
+	{AustinP_ArcMain_Die4,   {  0,  0,180,205}, { 60, 229}}, //24
+	{AustinP_ArcMain_Die5,   {  0,  0,181,205}, { 61, 229}}, //25
+	{AustinP_ArcMain_Die6,   {  0,  0,161,205}, { 62, 229}}, //26
+	{AustinP_ArcMain_Die7,   {  0,  0,160,205}, { 61, 229}}, //27
+	{AustinP_ArcMain_Die8,   {  0,  0,160,205}, { 61, 229}}, //28
+
+	
 	
 };
 
-static const Animation char_austinp_anim[CharAnim_Max] = {
+static const Animation char_austinp_anim[PlayerAnim_Max] = {
 	{2, (const u8[]){ 0, 1,  2,  3,  ASCR_BACK, 1}}, //CharAnim_Idle
 	{2, (const u8[]){ 13, 14, 15, ASCR_BACK, 1}},         //CharAnim_Left
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_LeftAlt
@@ -79,6 +109,22 @@ static const Animation char_austinp_anim[CharAnim_Max] = {
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_UpAlt
 	{2, (const u8[]){4, 5, 6, ASCR_BACK, 1}},         //CharAnim_Right
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_RightAlt
+
+	{1, (const u8[]){ 13, 14, 16, ASCR_BACK, 1}},      //PlayerAnim_LeftMiss
+	{1, (const u8[]){ 7, 8, 17, ASCR_BACK, 1}},     //PlayerAnim_DownMiss
+	{1, (const u8[]){10, 11, 18, ASCR_BACK, 1}},     //PlayerAnim_UpMiss
+	{1, (const u8[]){4, 5, 19, ASCR_BACK, 1}},     //PlayerAnim_RightMiss
+
+	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //PlayerAnim_Peace
+	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},      //PlayerAnim_Sweat
+
+	{2, (const u8[]){20, 21, 22, 23, 24, 25, 26, 27, ASCR_CHGANI, PlayerAnim_Dead1}}, //PlayerAnim_Dead0
+	{2, (const u8[]){27, ASCR_CHGANI, PlayerAnim_Dead2}},
+	{20, (const u8[]){27, 27, 27, ASCR_CHGANI, PlayerAnim_Dead3}},
+	{20, (const u8[]){28,  ASCR_BACK, 1}},
+	{0, (const u8[]){ ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
+	{0, (const u8[]){ ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
+	{0, (const u8[]){ ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
 };
 
 //AustinP character functions
@@ -144,7 +190,7 @@ Character *Char_AustinP_New(fixed_t x, fixed_t y)
 	Character_Init((Character*)this, x, y);
 	
 	//Set character information
-	this->character.spec = 0;
+	this->character.spec = CHAR_SPEC_MISSANIM;
 	
 	this->character.health_i = 4;
 	
@@ -169,6 +215,18 @@ Character *Char_AustinP_New(fixed_t x, fixed_t y)
         "right0.tim",
         "right1.tim",
         "right2.tim",
+		"missl.tim",
+		"missd.tim",
+		"miss.tim",
+		"die0.tim",
+		"die1.tim",
+		"die2.tim",
+		"die3.tim",
+		"die4.tim",
+		"die5.tim",
+		"die6.tim",
+		"die7.tim",
+		"die8.tim",
 
 		NULL
 	};

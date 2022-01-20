@@ -390,8 +390,8 @@ void Menu_Tick(void)
 				//Fallthrough
 					case 6:
 					case 5:
-						menu.font_bold.draw(&menu.font_bold, "IN ASSOCIATION", SCREEN_WIDTH2, SCREEN_HEIGHT2 - 64, FontAlign_Center);
-						menu.font_bold.draw(&menu.font_bold, "WITH",           SCREEN_WIDTH2, SCREEN_HEIGHT2 - 48, FontAlign_Center);
+						menu.font_bold.draw(&menu.font_bold, "BUILT ON TOP", SCREEN_WIDTH2, SCREEN_HEIGHT2 - 64, FontAlign_Center);
+						menu.font_bold.draw(&menu.font_bold, "OF",           SCREEN_WIDTH2, SCREEN_HEIGHT2 - 48, FontAlign_Center);
 						break;
 					
 					case 11:
@@ -447,6 +447,18 @@ void Menu_Tick(void)
 				menu.next_page = MenuPage_Main;
 				menu.next_select = 0;
 			}
+
+			//SUPA DUPA SECRET
+				if (pad_state.press & PAD_R1)
+				{
+					menu.next_page = MenuPage_Stage;
+					menu.page_param.stage.id = StageId_1_6;
+					menu.page_param.stage.story = true;
+					menu.trans_time = FIXED_UNIT;
+					menu.page_state.title.fade = FIXED_DEC(255,1);
+					menu.page_state.title.fadespd = FIXED_DEC(510,1);;
+
+				}
 			
 			//Draw Friday Night Funkin' logo
 			if ((stage.flag & STAGE_FLAG_JUST_STEP) && (stage.song_step & 0x3) == 0 && menu.page_state.title.logo_bump == 0)
@@ -775,8 +787,8 @@ void Menu_Tick(void)
 				{StageId_1_3, 0x889AC8, "POST MORTAL"},
 				{StageId_1_4, 0x889AC8, "PLAYTHING"},
 				{StageId_1_5, 0x889AC8, "SYSTEM FAILURE"},
-				{StageId_1_6, 0x889AC8, "BANANALED"},
-				{StageId_1_7, 0x889AC8, "INTRO"},
+				//{StageId_1_6, 0x889AC8, "BANANALED"},
+				//{StageId_1_7, 0x889AC8, "INTRO"},
 			};
 			//Initialize page
 			if (menu.page_swap)

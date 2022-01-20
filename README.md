@@ -1,13 +1,15 @@
-# PSXFunkin
-Friday Night Funkin' on the PSX LOL
+# Wiisx (not the emulator)
+Murderous Miis on a god damn PS1 LOL
 
 ## Compilation
-Refer to [COMPILE.md](/COMPILE.md) here
+You know the drill, read [COMPILE.md](/COMPILE.md).
 
-For those who just want to see the newest updates:
-[Nightly Builds](https://drive.google.com/drive/folders/14HS19JOxp1DeQ2tYhkvwEZ8JYgA84b12)
 
 ## Disclaimer
-This project is not endorsed by the original Friday Night Funkin' devs, this is just an unofficial fan project because I was bored.
+This is a port of Mii Funkin: VS Eteled to Playstation one. This was made with permission from TheMaskedChris.
 
-Assets such as Week 7, VS Kapi, VS Tricky are used with permission from their respective owners.
+This is also a modified version of PSXFunkin, by CuckyDev.
+
+Also, I forgot there was a PSX Wii emulator called WiiSX when I made this repo, so if you are looking for that, you are in the wrong place lol.
+
+Credits can be found in the game itself, and the gamebanana page.
